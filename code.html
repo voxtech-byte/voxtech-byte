@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VoxTech | The Digital Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d9e2ff",
+                    "inverse-surface": "#2e3132",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "tertiary": "#251800",
+                    "surface-tint": "#2b5bb5",
+                    "surface-container": "#edeeef",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-container": "#6b95f3",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-container": "#b6924c",
+                    "secondary-fixed-dim": "#bbc8d0",
+                    "inverse-primary": "#b0c6ff",
+                    "primary-container": "#002c6e",
+                    "on-background": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "on-secondary-fixed-variant": "#3c494f",
+                    "on-error-container": "#93000a",
+                    "secondary": "#546067",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#d7e4ec",
+                    "surface-variant": "#e1e3e4",
+                    "secondary-container": "#d7e4ec",
+                    "outline-variant": "#c6c5d4",
+                    "background": "#f8f9fa",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#001944",
+                    "tertiary-container": "#402c00",
+                    "on-secondary-fixed": "#111d23",
+                    "on-primary-fixed": "#001945",
+                    "outline": "#767683",
+                    "on-tertiary-fixed": "#261900",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-surface-variant": "#454652",
+                    "tertiary-fixed": "#ffdea5",
+                    "surface-container-low": "#f3f4f5",
+                    "on-surface": "#191c1d",
+                    "on-secondary-container": "#5a666d",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed-variant": "#00429c",
+                    "primary-fixed-dim": "#b0c6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCQINbft88C-yQg-iHOD4p0ak_m5Sxi1xu8U5h85xp5Zo_Ks98Mgr2OGaAaTzG5BeosFyZ10x7_f_0qnPaCBYz80AE6KMGFInp_ItMBWlDf1eiskBu2HnhNZp6l_24rUFy0f3Q-KC4V9TSPA3W5O_pKrIyS8nfnFyL_soLULELcM0-Yo2z2OG__10XDhDFpYteatcN48DrEK7XDweV1_59_7NmlVOPiN1Db0omUXizmmthPIywTmjnwrO8IiSXfwCy-axdqfVYHAtk)
+    }
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed
+    }
+.asymmetric-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%)
+    }
+.editorial-shadow {
+    box-shadow: 0 32px 64px -12px rgba(0, 25, 68, 0.06)
+    }
+.magnetic-hover {
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)
+    }
+.magnetic-hover:hover {
+    transform: translatex(8px)
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- Navigation Shell (TopNavBar from JSON) -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl transition-all duration-500 ease-in-out shadow-sm">
+<div class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
+<span class="text-2xl font-bold tracking-tighter text-blue-950">VoxTech</span>
+<div class="hidden md:flex gap-10 font-manrope tracking-tight font-light text-slate-500">
+<a class="text-blue-950 border-b-2 border-blue-900 pb-1 transition-all duration-500 ease-in-out hover:opacity-70" href="#">Editorial</a>
+<a class="hover:text-blue-900 transition-all duration-500 ease-in-out hover:opacity-70" href="#">Synthesis</a>
+<a class="hover:text-blue-900 transition-all duration-500 ease-in-out hover:opacity-70" href="#">Archive</a>
+<a class="hover:text-blue-900 transition-all duration-500 ease-in-out hover:opacity-70" href="#">Concierge</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-manrope font-semibold tracking-tight transition-all duration-500 ease-in-out hover:opacity-70 shadow-lg shadow-primary/10">
+                Begin Journey
+            </button>
+</div>
+</nav>
+<!-- Side Decoration -->
+<aside class="fixed left-0 top-0 h-full w-24 hidden lg:flex flex-col items-center justify-center pointer-events-none z-40">
+<div class="vertical-text text-[10px] tracking-[0.5em] uppercase text-slate-400 font-label">
+            The Digital Concierge • VoxTech 2024 • Synthesis of Emotion
+        </div>
+</aside>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center px-12 md:px-24 pt-32 pb-12 overflow-hidden">
+<!-- Background Geometric Shape -->
+<div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-12 gap-6 items-center">
+<div class="col-span-12 lg:col-span-7 relative z-10">
+<span class="text-tertiary-fixed-dim font-label text-xs tracking-[0.2em] uppercase mb-4 block">Redefining Presence</span>
+<h1 class="font-headline font-extrabold text-7xl md:text-9xl tracking-tighter text-blue-950 leading-[0.85] mb-8">
+                        THE NEW <br/> STANDARD
+                    </h1>
+<p class="max-w-md text-secondary leading-relaxed font-light text-lg mb-10">
+                        Crafting digital vessels for human sentiment. We bridge the distance with high-fidelity synthesis and bespoke editorial direction.
+                    </p>
+<div class="flex items-center gap-8">
+<div class="w-24 h-[1px] bg-outline-variant/30"></div>
+<a class="font-manrope font-bold text-primary group flex items-center gap-2" href="#">
+                            Explore Synthesis
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden editorial-shadow -rotate-2 scale-110 md:scale-100 transition-transform duration-700 hover:rotate-0">
+<img alt="" class="w-full h-full object-cover" data-alt="luxury wedding reception with elegant floral arrangements and warm candlelight in a grand historic hall atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTGXrJkBTzbOJMAjo0u_GxuRHOpoS-WTLTpgpuhDEtYhljpiGlmTlzynXUlIL_VgCGLLN0ZWanyd2GO2MwXl8-dKdXlrZheqlcsEDUkbFBH13TPYpgsZoTMPXlLEW0vef-YXiJfB3n2RCsjCLF9bEf11x2wo3Z-Y7WyTGpVKEgl70W8DmKM8-dXOAvj7IonmV3EB7Y5ztTowaGOTwwbQYFmD7SAiGlGCnPF3jwx5fCG8vIaSlKozCzCodPqZY1tWMj-NkzhsPQrPM"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+<!-- Overlapping Card -->
+<div class="absolute -bottom-10 -left-10 bg-surface-container-lowest p-8 rounded-xl shadow-2xl max-w-[280px] hidden md:block">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="font-headline font-bold text-blue-950 mb-2">Synthesis Mode</p>
+<p class="text-xs text-slate-500 leading-relaxed">Neural-mapped greetings that capture the nuance of human inflection with 99.8% emotional accuracy.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative: Why Us -->
+<section class="py-32 px-12 md:px-24 bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+<div class="absolute top-1/4 right-0 w-[40rem] h-[1px] bg-primary/10 rotate-[25deg]"></div>
+<div class="absolute top-2/4 right-0 w-[40rem] h-[1px] bg-primary/10 rotate-[25deg]"></div>
+</div>
+<div class="max-w-7xl mx-auto">
+<div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<h2 class="font-headline font-black text-6xl text-blue-950 tracking-tighter">THE VISION</h2>
+<p class="text-slate-500 max-w-sm font-light uppercase tracking-widest text-xs leading-loose">
+                        We don't just deliver messages. We architect moments that transcend digital barriers.
+                    </p>
+</div>
+<div class="space-y-48">
+<!-- Point 01 -->
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="text-[12rem] font-headline font-extrabold text-primary-container/5 leading-none select-none">01</div>
+<div class="max-w-xl -ml-24 md:-ml-40 relative z-10">
+<h3 class="font-headline font-bold text-3xl mb-6 text-blue-900">Bespoke Curation</h3>
+<p class="text-secondary leading-relaxed text-lg">
+                                Every interaction is hand-tailored by our editorial team. We don't use templates; we use architecture to frame your sentiment within a premium digital environment.
+                            </p>
+</div>
+<div class="flex-grow"></div>
+<div class="w-full md:w-80 h-96 rounded-xl overflow-hidden editorial-shadow rotate-3">
+<img alt="" class="w-full h-full object-cover" data-alt="close up of premium handmade stationery with gold foil lettering and dark navy paper on a marble desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1XdozX74yQ1q1Tz_51I9sJBrJqYyaDeqhSvzPnKpDXF-wXasCNwtE8mVt7ouShi9Je4VGy6LxH6cjFEMUSECKxThimB8tGzDeBx0YVxHTmeyM_jhjezGBRUbrUKbbgQjYvkH8OUvGl69BmGeJwgEXKgZL9CKyvOCPxQxEBZsnkHN0PCtutMP0_yy7KY6_2Ac1EkfItDR0_bjmpzlQTGRXkvmdp57yv0CiuVAZVwiT0DUPT1pOp9B-lqBViZBjWTH_t67e-UU8AGI"/>
+</div>
+</div>
+<!-- Point 02 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="text-[12rem] font-headline font-extrabold text-primary-container/5 leading-none select-none">02</div>
+<div class="max-w-xl -mr-24 md:-mr-40 relative z-10">
+<h3 class="font-headline font-bold text-3xl mb-6 text-blue-900">Voice Architecture</h3>
+<p class="text-secondary leading-relaxed text-lg">
+                                Our proprietary synthesis engine captures not just the sound, but the spirit. Using deep-layer sentiment analysis, we ensure the tone matches the gravity of the occasion.
+                            </p>
+</div>
+<div class="flex-grow"></div>
+<div class="w-full md:w-80 h-96 rounded-xl overflow-hidden editorial-shadow -rotate-6">
+<img alt="" class="w-full h-full object-cover" data-alt="modern minimalist recording studio with warm timber acoustic panels and professional condenser microphone on a stand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu69YeKnlkE5s29ZqMhz-qBPaCNVKHNcp-Hw_8BahFzGT9Cs_IOd2SRLkDjFg8GDRyAQpCbZ0BC05xPnCVlDk4A86cTbQxYfpLA8M0GZCfwLl6hbwV9DOaJcxkLyIwCuD6ytNtP4XMOxIf4_iKUj6OwVbGPOXNbzVZQhSe6prS0fieHrMdoqOjJAZ0Fvwyywo5ZUZHNU9uXm9W8g5TBpQL_EIZHjk3WpP6iCNv2fhKHG5_e-il02zDxGKSdIBS8faJaZTvZyOK1JA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Masonry -->
+<section class="py-32 px-12 md:px-24">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Header Column -->
+<div class="md:col-span-4 flex flex-col justify-center">
+<div class="vertical-text hidden md:block text-primary-container/20 font-headline font-black text-8xl leading-none tracking-tighter mb-8">WORKS</div>
+<h2 class="font-headline font-bold text-5xl text-blue-950 mb-8 tracking-tighter leading-none">Curated <br/> Moments.</h2>
+<p class="text-slate-500 font-light max-w-xs">A collection of our most prestigious synthesis deployments across the globe.</p>
+</div>
+<!-- Masonry Grid -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-8">
+<div class="relative group overflow-hidden rounded-2xl aspect-[3/4]">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxury corporate gala event with blue lighting and high-end digital displays in a modern skyscraper hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8W5WAKefxQ57iP7iybhdj1oWGoE3oDpAmRaYfEWMurU-iLtxxGapGVAs7WoRPAOHgSKABjG0ATnR8xDnaQ2v7mYL31saEXMJZ4olHSLigAvMRdNUssff6mLtx2DLcvg6bj-9nglNTYaEPfjv2Jl140aZPt8eIqLYnzeWL5qNNJxrsB0H7sBq8vYXqeZOC8a95zdm4TgF-UNN6ufJ1HkEF-s2QUrjaUN77ySIqzvpSfeviMnojmKSKssakfW1yQxa7XoxneXXZH_A"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-xs uppercase tracking-widest mb-2 font-label">Corporate</span>
+<h4 class="font-headline font-bold text-2xl">The Global Summit</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl aspect-square">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="fashion runway show with dramatic spotlighting and luxury minimalist set design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbgF6asGEBNCT2GGGq5rxOIioqEeKbW1IJdETK3d6l8RSY3iNoZLG0Dm2ZqfDAYRuH3jlpwXOVyIm2YwHq7GmMWFnczbJDiTzSrWjjP-V4MJT6TBwx6BovF3mV26ZpWTlxVidh8kZIz-zEEryC1iTwwqg3H7w5RNR_F_26EUdmVPLkjJHb8-2l3-n21mPRTVpl44HGz2AXvNBLNzSeYnyhKQvexCXSIBxymwsQPdq-p5EuNN8aRi6ac26pc0a9pmMUHc7fzlslNEA"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-xs uppercase tracking-widest mb-2 font-label">Editorial</span>
+<h4 class="font-headline font-bold text-2xl">Vogue Synthesis</h4>
+</div>
+</div>
+</div>
+<div class="space-y-8 md:pt-24">
+<div class="relative group overflow-hidden rounded-2xl aspect-square">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="elegant wedding dinner table setting with crystal glasses and white floral centerpieces at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZrQYRqfjfPZ6uXPlCWz98hOu-fF445KocSB5IX6Cl2UsTwNppJQZElUV5IHynvtUGwkmkgJjBSzWmq41yPzAEuTWlrRtF-PNV_eXiwuIgUV1HcZXKRmS_LCgI3c7mrarfX4Jg3-acXjBkgO5cxteZalMYDHEYbkDedRQ8YlQrqTNA8uYhKVQydeWm0xrtvPRSuZ0tCnPrwV4W_TU3IlmwSKNPuxMlMpcf7zsTsRavjJf7VEV9N3l4Iz6dKXfl7qMFtvIaRrDJ7XE"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-xs uppercase tracking-widest mb-2 font-label">Celebration</span>
+<h4 class="font-headline font-bold text-2xl">The Eternal Knot</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl aspect-[3/4]">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="black tie formal event with people interacting in a sophisticated dimly lit lounge setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnp68LEQq4uW7hwzmD-bF0w14wndKDovuOvqkRMGkBhhFGaXccPiGrJjmPkZZRdDGjabJupVsa79Ybnx1JsycjhyRoytWTIcrfrr_lLJ1mrPiJ4A2YBHedTu9CfX0Vl8DhhIHUBm5NWawluPSh5JchBoU4dE1QTfAm2CDPoOlpiqbHuw5Lq4N2yQAjsljOYFc56pjP25OkN-j5BNylMW7dycmuNmfI_Z75A-4qN_JXqyNF37agiQwMP34qmP0EN6vYfzMVC7wZT6k"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8 text-white">
+<span class="text-xs uppercase tracking-widest mb-2 font-label">Legacy</span>
+<h4 class="font-headline font-bold text-2xl">Founder's Archive</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing: Bold & Staggered -->
+<section class="py-32 bg-primary relative overflow-hidden">
+<!-- Background Decoration -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] border border-white/5 rounded-full pointer-events-none"></div>
+<div class="max-w-screen-2xl mx-auto px-12 md:px-24 flex flex-col md:flex-row gap-16 relative z-10">
+<div class="md:w-1/3">
+<h2 class="font-headline font-black text-6xl text-white tracking-tighter leading-none mb-8">INVEST IN <br/> SENTIMENT.</h2>
+<p class="text-white/60 font-light mb-12">Select the tier that aligns with your legacy requirements. All plans include neural mastering.</p>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-10 py-4 rounded-xl font-headline font-bold transition-all hover:scale-105 active:scale-95">
+                        Upgrade to Premium
+                    </button>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<!-- Standard Tier -->
+<div class="bg-white p-12 rounded-xl editorial-shadow md:mt-24">
+<span class="font-label text-[10px] tracking-widest uppercase text-slate-400 block mb-2">Editorial Tier</span>
+<h3 class="font-headline font-bold text-3xl text-blue-950 mb-6">Concierge</h3>
+<div class="mb-8">
+<span class="text-5xl font-headline font-black text-blue-900">$299</span>
+<span class="text-slate-400 text-sm italic">/event</span>
+</div>
+<ul class="space-y-4 mb-12 text-slate-600 font-light">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary">check</span> 3 Neural Greetings</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary">check</span> Standard Voice Synthesis</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary">check</span> 48h Delivery</li>
+</ul>
+<a class="block text-center py-4 border border-outline-variant/30 rounded-lg text-primary font-bold hover:bg-slate-50 transition-colors" href="#">Start Archive</a>
+</div>
+<!-- Premium Tier (Raised/Floating) -->
+<div class="bg-surface-container-lowest p-12 rounded-xl editorial-shadow relative -translate-y-12">
+<div class="absolute top-0 right-12 -translate-y-1/2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Most Requested</div>
+<span class="font-label text-[10px] tracking-widest uppercase text-slate-400 block mb-2">Exclusive Tier</span>
+<h3 class="font-headline font-bold text-3xl text-blue-950 mb-6">Synthesis+</h3>
+<div class="mb-8">
+<span class="text-5xl font-headline font-black text-blue-900">$849</span>
+<span class="text-slate-400 text-sm italic">/event</span>
+</div>
+<ul class="space-y-4 mb-12 text-slate-600 font-light">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary" data-weight="fill">verified</span> Unlimited Greetings</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary" data-weight="fill">verified</span> High-Fidelity Neural Clone</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary" data-weight="fill">verified</span> Bespoke Editorial Scripting</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary" data-weight="fill">verified</span> 24/7 Priority Support</li>
+</ul>
+<a class="block text-center py-4 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-opacity" href="#">Reserve Selection</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full relative mt-24 rounded-t-[3rem] bg-slate-100 dark:bg-slate-900">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 px-16 py-24 max-w-screen-2xl mx-auto items-end">
+<div>
+<span class="text-6xl font-manrope font-bold tracking-tighter mb-8 block text-blue-950 dark:text-blue-50">VoxTech</span>
+<p class="text-slate-600 dark:text-slate-400 max-w-md font-inter leading-relaxed tracking-tight mb-8">
+                    Bridging the physical and digital divide with precision synthesis. Every sentiment deserves a vessel of unparalleled quality.
+                </p>
+<div class="flex gap-6">
+<a class="text-slate-600 hover:text-blue-900 transition-all" href="#">Editorial</a>
+<a class="text-slate-600 hover:text-blue-900 transition-all" href="#">Portfolio</a>
+<a class="text-slate-600 hover:text-blue-900 transition-all" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-col items-end gap-12">
+<div class="flex flex-wrap justify-end gap-x-8 gap-y-4 font-inter text-sm">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all" href="#">Privacy Policy</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all" href="#">Terms of Service</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all" href="#">Editorial Guidelines</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all" href="#">RSS Feed</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all" href="#">Accessibility</a>
+</div>
+<div class="text-right">
+<p class="text-slate-400 text-xs font-inter leading-relaxed tracking-tight">
+                        © 2024 VoxTech. Crafted for Sentiments.
+                    </p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQINbft88C-yQg-iHOD4p0ak_m5Sxi1xu8U5h85xp5Zo_Ks98Mgr2OGaAaTzG5BeosFyZ10x7_f_0qnPaCBYz80AE6KMGFInp_ItMBWlDf1eiskBu2HnhNZp6l_24rUFy0f3Q-KC4V9TSPA3W5O_pKrIyS8nfnFyL_soLULELcM0-Yo2z2OG__10XDhDFpYteatcN48DrEK7XDweV1_59_7NmlVOPiN1Db0omUXizmmthPIywTmjnwrO8IiSXfwCy-axdqfVYHAtk");
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .asymmetric-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+
+  .editorial-shadow {
+    box-shadow: 0 32px 64px -12px rgba(0, 25, 68, 0.06);
+  }
+
+  .magnetic-hover {
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .magnetic-hover:hover {
+    transform: translatex(8px);
+  }
+
+  /* Animations for Intersection Observer */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+  .delay-400 { transition-delay: 400ms; }
+  .delay-500 { transition-delay: 500ms; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .magnetic-hover:hover {
+      transform: none !important;
+    }
+  }
+  
+  /* Missing scrollbar hide utility for WebKit */
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  .scrollbar-hide {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+  }
+
+  /* Decorative Patterns */
+  .bg-dot-grid {
+    background-image: radial-gradient(circle, rgba(0,0,0,0.05) 2px, transparent 2px);
+    background-size: 24px 24px;
+    background-position: -2px -2px;
+  }
+  
+  .bg-dot-grid-white {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px);
+    background-size: 24px 24px;
+    background-position: -2px -2px;
+  }
+  
+  .bg-concentric {
+    background-image: repeating-radial-gradient(
+      circle at center,
+      transparent 0,
+      transparent 40px,
+      rgba(255,255,255,0.03) 40px,
+      rgba(255,255,255,0.03) 41px
+    );
+  }
+  
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 60px;
+  }
+  
+  @media (min-width: 768px) {
+    .wave-divider svg {
+      height: 120px;
+    }
+  }
+}
