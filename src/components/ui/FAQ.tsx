@@ -32,7 +32,7 @@ export default function FAQ() {
                 <button 
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   className="w-full flex justify-between items-center py-6 px-4 md:px-8 text-left focus:outline-none"
-                  aria-expanded={isOpen ? "true" : "false"}
+                  aria-expanded={isOpen}
                 >
                   <span className="font-headline font-bold text-lg text-blue-950">{item.question}</span>
                   <span className={`transform transition-transform duration-300 flex-shrink-0 ml-4 ${isOpen ? 'rotate-180 text-primary' : 'text-slate-400'}`}>

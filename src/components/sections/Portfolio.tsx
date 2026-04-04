@@ -66,7 +66,7 @@ interface PortfolioItem {
 
 function PortfolioCard({ item, idx, isMobile }: { item: PortfolioItem, idx: number, isMobile?: boolean }) {
   return (
-    <div className={`flex flex-col gap-4 ${!isMobile ? 'animate-on-scroll' : ''}`} style={!isMobile ? { transitionDelay: `${(idx + 1) * 100}ms` } : {}}>
+    <div className={`flex flex-col gap-4 ${!isMobile ? `animate-on-scroll delay-${(idx + 1) * 100}` : ''}`}>
       <a 
         href={item.link}
         target="_blank"

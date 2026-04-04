@@ -1,12 +1,22 @@
 import { config } from "@/config/data";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="w-full relative mt-24 rounded-t-[3rem] bg-slate-100 dark:bg-slate-900 animate-on-scroll">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 px-8 md:px-16 py-24 max-w-screen-2xl mx-auto items-end">
         <div>
-          <span className="text-6xl font-headline font-bold tracking-tighter mb-8 block text-blue-950 dark:text-blue-50">VoxTech</span>
+          <div className="flex items-center gap-4 mb-8">
+            <Image 
+              src={config.seo.logo} 
+              alt="VoxTech Logo" 
+              width={48} 
+              height={48} 
+              className="w-12 h-12 object-contain"
+            />
+            <span className="text-6xl font-headline font-bold tracking-tighter text-blue-950 dark:text-blue-50">VoxTech</span>
+          </div>
           <p className="text-slate-600 dark:text-slate-400 max-w-md font-body leading-relaxed tracking-tight mb-8">
             {config.footer.description}
           </p>
