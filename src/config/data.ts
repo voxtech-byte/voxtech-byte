@@ -6,7 +6,7 @@ export const config = {
   },
   links: {
     form: "https://docs.google.com/forms/d/e/1FAIpQLSfuzFgR6m022znjM9xlMiLMRmQJE1dQP2Yr9bAV1ZOxT_ApXQ/viewform?usp=header",
-    whatsapp: "https://wa.me/6281038212083",
+    whatsapp: "https://wa.me/62881038212083",
   },
   hero: {
     tagline: "Jasa Web Greeting Personal",
@@ -114,35 +114,35 @@ export const config = {
   },
   faq: [
     {
-       question: "Berapa lama proses pengerjaannya?",
-       answer: "1-2 hari kerja setelah data lengkap diterima."
+      question: "Berapa lama proses pengerjaannya?",
+      answer: "1-2 hari kerja setelah data lengkap diterima."
     },
     {
-       question: "Apakah bisa request warna dan tema sendiri?",
-       answer: "Bisa, semua desain dibuat custom sesuai keinginan kamu."
+      question: "Apakah bisa request warna dan tema sendiri?",
+      answer: "Bisa, semua desain dibuat custom sesuai keinginan kamu."
     },
     {
-       question: "Apakah bisa include foto dan video?",
-       answer: "Bisa, untuk paket Standard foto & BGM, untuk Premium sudah termasuk video."
+      question: "Apakah bisa include foto dan video?",
+      answer: "Bisa, untuk paket Standard foto & BGM, untuk Premium sudah termasuk video."
     },
     {
-       question: "Apakah ada revisi?",
-       answer: "Ada — Standard 1x revisi minor, Premium 2x revisi."
+      question: "Apakah ada revisi?",
+      answer: "Ada — Standard 1x revisi minor, Premium 2x revisi."
     },
     {
-       question: "Bagaimana cara order?",
-       answer: "Isi form order, nanti akan dihubungi via WhatsApp dalam 1x24 jam."
+      question: "Bagaimana cara order?",
+      answer: "Isi form order, nanti akan dihubungi via WhatsApp dalam 1x24 jam."
     },
     {
-       question: "Apakah harga bisa nego?",
-       answer: "Bisa, hubungi kami dulu via WhatsApp untuk diskusi lebih lanjut."
+      question: "Apakah harga bisa nego?",
+      answer: "Bisa, hubungi kami dulu via WhatsApp untuk diskusi lebih lanjut."
     }
   ],
   footer: {
     description: "VoxTech — Menghadirkan momen spesial dalam bentuk digital yang personal dan berkesan.",
     links: [
-      { name: "Instagram", href: "#" },
-      { name: "WhatsApp", href: "https://wa.me/6281038212083" },
+      { name: "Instagram", href: "https://www.instagram.com/voxfactum/" },
+      { name: "WhatsApp", href: "https://wa.me/62881038212083" },
       { name: "Form Order", href: "https://docs.google.com/forms/d/e/1FAIpQLSfuzFgR6m022znjM9xlMiLMRmQJE1dQP2Yr9bAV1ZOxT_ApXQ/viewform?usp=header" }
     ]
   }
