@@ -204,6 +204,10 @@
     overflow: hidden;
   }
 
+  .accordion-content.open * {
+    opacity: 1 !important;
+  }
+
   /* ========================================
      PREFERS REDUCED MOTION — GLOBAL KILL SWITCH
      ======================================== */

@@ -11,7 +11,9 @@ export default function ScrollObserver() {
     isObserving.current = true;
 
     const isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const elements = document.querySelectorAll(".animate-on-scroll");
+    const elements = document.querySelectorAll(
+      ".animate-on-scroll:not(.accordion-content *)"
+    );
 
     // Fast-path for reduced motion
     if (isReducedMotion) {
