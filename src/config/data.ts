@@ -24,13 +24,13 @@ export const config = {
         id: "01",
         title: "Desain Custom",
         description: "Setiap web dibuat khusus sesuai request — warna, tema, vibe, hingga konten sepenuhnya disesuaikan dengan kebutuhan kamu",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB1XdozX74yQ1q1Tz_51I9sJBrJqYyaDeqhSvzPnKpDXF-wXasCNwtE8mVt7ouShi9Je4VGy6LxH6cjFEMUSECKxThimB8tGzDeBx0YVxHTmeyM_jhjezGBRUbrUKbbgQjYvkH8OUvGl69BmGeJwgEXKgZL9CKyvOCPxQxEBZsnkHN0PCtutMP0_yy7KY6_2Ac1EkfItDR0_bjmpzlQTGRXkvmdp57yv0CiuVAZVwiT0DUPT1pOp9B-lqBViZBjWTH_t67e-UU8AGI"
+        image: "/images/02.png"
       },
       {
         id: "02",
         title: "Cepat & Terjangkau",
         description: "Pengerjaan 1-2 hari kerja dengan harga mulai 30K — tanpa mengorbankan kualitas tampilan dan animasi",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDu69YeKnlkE5s29ZqMhz-qBPaCNVKHNcp-Hw_8BahFzGT9Cs_IOd2SRLkDjFg8GDRyAQpCbZ0BC05xPnCVlDk4A86cTbQxYfpLA8M0GZCfwLl6hbwV9DOaJcxkLyIwCuD6ytNtP4XMOxIf4_iKUj6OwVbGPOXNbzVZQhSe6prS0fieHrMdoqOjJAZ0Fvwyywo5ZUZHNU9uXm9W8g5TBpQL_EIZHjk3WpP6iCNv2fhKHG5_e-il02zDxGKSdIBS8faJaZTvZyOK1JA"
+        image: "/images/01.png"
       }
     ]
   },
