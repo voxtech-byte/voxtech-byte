@@ -67,8 +67,7 @@ export default function TextScramble({ text, isActive, className = "" }: TextScr
         return;
       }
       // Small delay for accordion to start opening
-      const timer = setTimeout(scramble, 50);
-      return () => clearTimeout(timer);
+      scramble();
     }
   }, [isActive, scramble, text]);
 
