@@ -10,9 +10,9 @@ export default function Navbar() {
           <Image 
             src={config.seo.logo} 
             alt="VoxTech Logo" 
-            width={32} 
-            height={32} 
-            className="w-8 h-8 object-contain"
+            width={40} 
+            height={40} 
+            className="w-10 h-10 object-contain drop-shadow-sm"
           />
           <span className="text-2xl font-bold tracking-tighter text-blue-950 font-headline">VoxTech</span>
         </div>

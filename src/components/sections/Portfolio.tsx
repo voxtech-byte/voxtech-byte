@@ -2,22 +2,24 @@ import { config } from "@/config/data";
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 md:py-32 px-0 md:px-24">
+    <section id="portfolio" className="py-24 md:py-32 px-0 md:px-24 bg-slate-200 relative">
+      {/* Decorative vertical line */}
+      <div className="hidden md:block absolute top-0 left-12 w-[1px] h-full bg-slate-900/5"></div>
       <div className="max-w-screen-2xl mx-auto px-6 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Header Column */}
           <div className="md:col-span-4 flex flex-col justify-center animate-on-scroll relative">
             {/* Decorative Star/Asterisk */}
-            <svg className="absolute -top-12 -left-8 w-24 h-24 text-primary/10 animate-[spin_10s_linear_infinite] pointer-events-none hidden md:block" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="absolute -top-12 -left-8 w-24 h-24 text-slate-900/5 animate-[spin_10s_linear_infinite] pointer-events-none hidden md:block" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
             </svg>
-            <div className="vertical-text hidden md:block text-primary-container/20 font-headline font-black text-8xl leading-none tracking-tighter mb-8">
+            <div className="vertical-text hidden md:block text-slate-900/5 font-headline font-black text-8xl leading-none tracking-tighter mb-8">
               {config.portfolio.title}
             </div>
             <h2 className="font-headline font-bold text-4xl md:text-5xl text-blue-950 mb-8 tracking-tighter leading-none whitespace-pre-line">
               {config.portfolio.headline}
             </h2>
-            <p className="text-slate-500 font-light max-w-xs font-body">
+            <p className="text-slate-600 font-light max-w-xs font-body">
               {config.portfolio.description}
             </p>
           </div>
@@ -51,6 +53,13 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+      
+      {/* Transisi Wave ke Section Pricing (bg-slate-800) */}
+      <div className="wave-divider text-slate-800 relative z-20">
+        <svg viewBox="0 0 1440 320" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,117.3C960,107,1056,149,1152,154.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
     </section>
   );
 }
@@ -71,7 +80,8 @@ function PortfolioCard({ item, idx, isMobile }: { item: PortfolioItem, idx: numb
         href={item.link}
         target="_blank"
         rel="noopener noreferrer"
-        className={`block relative group overflow-hidden rounded-2xl ${item.aspectRatio} transition-all duration-500`}
+        className={`card-lift block relative group overflow-hidden rounded-2xl ${item.aspectRatio} transition-all duration-300`}
+        style={{ perspective: "800px" }}
       >
         {/* Main Content Image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}

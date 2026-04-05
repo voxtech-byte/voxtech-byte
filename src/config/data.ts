@@ -3,7 +3,7 @@ export const config = {
     title: "VoxTech — Jasa Web Greeting Personal & Aesthetic",
     description: "Buat momen spesialmu tak terlupakan dengan web greeting custom. Desain aesthetic, animasi smooth, harga mulai 30K. Pesan sekarang!",
     url: "https://voxtech.id",
-    logo: "/favicon.ico",
+    logo: "/favicon.svg",
   },
   links: {
     form: "https://docs.google.com/forms/d/e/1FAIpQLSfuzFgR6m022znjM9xlMiLMRmQJE1dQP2Yr9bAV1ZOxT_ApXQ/viewform?usp=header",

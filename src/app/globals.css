@@ -28,33 +28,185 @@
     box-shadow: 0 32px 64px -12px rgba(0, 25, 68, 0.06);
   }
 
+  .premium-shadow {
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3), 0 0 20px -5px rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   .magnetic-hover {
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .magnetic-hover:hover {
-    transform: translatex(8px);
+    transform: translateX(8px);
   }
 
-  /* Animations for Intersection Observer */
+  /* ========================================
+     SCROLL-TRIGGERED ANIMATIONS
+     ======================================== */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
   }
 
   .animate-on-scroll.in-view {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .delay-100 { transition-delay: 100ms; }
   .delay-200 { transition-delay: 200ms; }
   .delay-300 { transition-delay: 300ms; }
   .delay-400 { transition-delay: 400ms; }
   .delay-500 { transition-delay: 500ms; }
 
+  /* ========================================
+     FLOATING NUMBER — WHY US
+     Pure CSS, translateY only, 5s cycle
+     ======================================== */
+  @keyframes float-subtle {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-12px); }
+  }
+
+  .float-number {
+    animation: float-subtle 5s ease-in-out infinite alternate;
+  }
+
+  /* ========================================
+     FLOATING CARD — PRICING POPULAR
+     Pure CSS, translateY 7px, 3.5s cycle
+     ======================================== */
+  @keyframes float-card {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+  }
+
+  .float-card-popular {
+    animation: float-card 3.5s ease-in-out infinite alternate;
+  }
+
+  /* ========================================
+     PULSE GLOW — PRICING POPULAR BORDER
+     Subtle box-shadow throb, no filter blur
+     ======================================== */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0), 0 25px 50px -12px rgba(0,0,0,0.25); }
+    50% { box-shadow: 0 0 30px 4px rgba(59, 130, 246, 0.15), 0 25px 50px -12px rgba(0,0,0,0.25); }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* ========================================
+     GRADIENT SHIFT — FOOTER
+     Background-position shift, 10s cycle
+     ======================================== */
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .gradient-shift-bg {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e1b4b 50%, #0f172a 75%, #020617 100%);
+    background-size: 400% 400%;
+    animation: gradient-shift 10s ease infinite;
+  }
+
+  /* ========================================
+     MORPHING BLOBS — HERO
+     SVG-driven via CSS for shape, positioned in background
+     ======================================== */
+  @keyframes morph-blob-1 {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(0, 0) rotate(0deg); }
+    25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    50% { border-radius: 50% 60% 30% 60% / 30% 50% 70% 60%; transform: translate(10px, -10px) rotate(5deg); }
+    75% { border-radius: 60% 40% 50% 40% / 70% 30% 50% 60%; }
+  }
+
+  @keyframes morph-blob-2 {
+    0%, 100% { border-radius: 40% 60% 60% 40% / 40% 50% 50% 60%; transform: translate(0, 0) rotate(0deg); }
+    25% { border-radius: 50% 40% 60% 50% / 60% 40% 50% 40%; }
+    50% { border-radius: 60% 50% 40% 50% / 50% 60% 50% 40%; transform: translate(-8px, 8px) rotate(-3deg); }
+    75% { border-radius: 40% 50% 50% 60% / 40% 60% 40% 60%; }
+  }
+
+  .morph-blob-1 {
+    animation: morph-blob-1 10s ease-in-out infinite;
+    will-change: border-radius, transform;
+  }
+
+  .morph-blob-2 {
+    animation: morph-blob-2 12s ease-in-out infinite;
+    will-change: border-radius, transform;
+  }
+
+  /* ========================================
+     CARD LIFT — PORTFOLIO
+     Hover effect with translateY + scale + subtle rotateX
+     ======================================== */
+  .card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(2deg);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 767px) {
+    .card-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  /* ========================================
+     TILT CARD — WHY US IMAGE
+     3D perspective container
+     ======================================== */
+  .tilt-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .tilt-card-inner {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+  /* ========================================
+     ACCORDION SMOOTH — FAQ
+     grid-template-rows technique
+     ======================================== */
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .accordion-content.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .accordion-content > div {
+    overflow: hidden;
+  }
+
+  /* ========================================
+     PREFERS REDUCED MOTION — GLOBAL KILL SWITCH
+     ======================================== */
   @media (prefers-reduced-motion: reduce) {
     .animate-on-scroll {
       transition: none !important;
@@ -64,30 +216,70 @@
     .magnetic-hover:hover {
       transform: none !important;
     }
-  }
-  
-  /* Missing scrollbar hide utility for WebKit */
-  .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-  }
-  .scrollbar-hide {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
+    .float-number,
+    .float-card-popular,
+    .pulse-glow,
+    .morph-blob-1,
+    .morph-blob-2 {
+      animation: none !important;
+    }
+    .gradient-shift-bg {
+      animation: none !important;
+      background-position: 0% 50% !important;
+    }
+    .card-lift:hover {
+      transform: none !important;
+    }
+    .tilt-card-inner {
+      transform: none !important;
+    }
+    .accordion-content {
+      transition: none !important;
+    }
   }
 
-  /* Decorative Patterns */
+  /* ========================================
+     SCROLLBAR HIDING
+     ======================================== */
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ========================================
+     DECORATIVE PATTERNS
+     ======================================== */
   .bg-dot-grid {
     background-image: radial-gradient(circle, rgba(0,0,0,0.05) 2px, transparent 2px);
     background-size: 24px 24px;
     background-position: -2px -2px;
   }
-  
+
+  .bg-dot-grid-dark {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+  }
+
   .bg-dot-grid-white {
     background-image: radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px);
     background-size: 24px 24px;
     background-position: -2px -2px;
   }
-  
+
   .bg-concentric {
     background-image: repeating-radial-gradient(
       circle at center,
@@ -97,7 +289,7 @@
       rgba(255,255,255,0.03) 41px
     );
   }
-  
+
   .wave-divider {
     position: absolute;
     bottom: 0;
@@ -108,14 +300,14 @@
     pointer-events: none;
     z-index: 10;
   }
-  
+
   .wave-divider svg {
     position: relative;
     display: block;
     width: calc(150% + 1.3px);
     height: 60px;
   }
-  
+
   @media (min-width: 768px) {
     .wave-divider svg {
       height: 120px;
