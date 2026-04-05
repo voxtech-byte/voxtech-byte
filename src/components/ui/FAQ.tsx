@@ -28,7 +28,7 @@ export default function FAQ() {
             return (
               <div 
                 key={idx} 
-                className={`border-b border-white/10 transition-colors duration-300 animate-on-scroll delay-${(idx % 5) * 100} ${isOpen ? 'bg-slate-800/50 rounded-t-lg shadow-xl' : ''}`}
+                className={`border-b border-white/10 transition-colors duration-300 ${isOpen ? 'bg-slate-800/50 rounded-t-lg shadow-xl' : ''}`}
               >
                 <button 
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
