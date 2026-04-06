@@ -92,7 +92,8 @@ export const config = {
           "Pengerjaan 1-2 Hari"
         ],
         ctaText: "Pesan Sekarang",
-        isPopular: false
+        isPopular: false,
+        formLink: "https://docs.google.com/forms/d/e/1FAIpQLSfuzFgR6m022znjM9xlMiLMRmQJE1dQP2Yr9bAV1ZOxT_ApXQ/viewform"
       },
       {
         id: "premium",
@@ -109,7 +110,8 @@ export const config = {
           "Prioritas Pengerjaan"
         ],
         ctaText: "Pesan Sekarang",
-        isPopular: true
+        isPopular: true,
+        formLink: "https://docs.google.com/forms/d/e/1FAIpQLSed22P2Ti-vdBqmaFEUY45yl-n0DLTNMEDGPqx-ejsGJNLPTw/viewform"
       }
     ]
   },
