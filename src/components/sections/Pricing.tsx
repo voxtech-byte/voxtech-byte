@@ -64,7 +64,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 
-                <a href={config.links.form} target="_blank" rel="noopener noreferrer" className={`block text-center py-4 rounded-xl font-bold transition-all font-body ${tier.isPopular ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md' : 'bg-slate-200 text-blue-950 hover:bg-slate-300 border border-slate-300'}`}>
+                <a href={tier.formLink} target="_blank" rel="noopener noreferrer" className={`block text-center py-4 rounded-xl font-bold transition-all font-body ${tier.isPopular ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-md' : 'bg-slate-200 text-blue-950 hover:bg-slate-300 border border-slate-300'}`}>
                   {tier.ctaText}
                 </a>
               </div>
