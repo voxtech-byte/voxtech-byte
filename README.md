@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muhammad Nizar Alfaris
 
-## Getting Started
+**AI Engineer | Tech Provider | Full-Stack Developer**
 
-First, run the development server:
+> "Better to employ AI than to be employed by AI"
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Full-stack developer specializing in **No-Code/Low-Code Web Development** and **AI-Powered Solutions**. I build modern, performant, and responsive web applications using current technologies.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Focused on **UI/UX Design**, **Software Engineering**, and integrating **AI Tools** to accelerate development workflows.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend
+- TypeScript, JavaScript
+- React, Next.js
+- HTML5, CSS3
+- Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Backend & Tools
+- Node.js
+- Docker
+- Vite
+- Git
 
-## Deploy on Vercel
+### AI & Development Tools
+- Claude AI
+- Qwen Coder
+- Cascade Windsurf
+- Stitch by Google
+- Magnus
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Certifications
+
+**RevoU - Software Engineering**
+- Fundamental Software Engineering
+- Advanced Software Engineering
+- Skills: Web Development, System Architecture
+
+**RevoU - Digital Marketing**
+- Digital Marketing Strategy & Implementation
+- Advanced Analytics & Performance Marketing
+
+---
+
+## Featured Projects
+
+**[Frontworks](https://voxtech-weld.vercel.app/)**  
+Personal portfolio and freelance web development platform. Built with Next.js, TypeScript, and Tailwind CSS.
+
+**Feyd Store**  
+E-commerce platform for digital products with modern UI/UX design.
+
+**Schola Internationalis**  
+Educational institution website with comprehensive information architecture.
+
+**Dapur Ummu Kamila**  
+Bakery showcase website with optimized performance and responsive design.
+
+**Program Tilawah 40 Hari**  
+Educational landing page with conversion-focused design.
+
+---
+
+## Services
+
+- UI/UX Design Implementation
+- Landing Page & Website Development
+- E-commerce Website Development
+- Responsive Web Design
+- Website Optimization & Performance Tuning
+- AI-Powered Web Solutions
+- Rapid Prototyping with AI Tools
+- Full-Stack Development
+
+---
+
+## GitHub Stats
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Anzar-G&show_icons=true&theme=radical)](https://github.com/Anzar-G)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Anzar-G&layout=compact&theme=radical)](https://github.com/Anzar-G)
+
+---
+
+## Connect
+
+[LinkedIn](https://www.linkedin.com/in/muhammad-niyar-49272339a) | [Portfolio](https://voxtech-weld.vercel.app/) | [GitHub](https://github.com/Anzar-G)
+
+---
+
+## Currently Working On
+
+- Optimizing web portfolio performance and responsiveness
+- Exploring advanced AI integration in frontend development
+- Building scalable e-commerce solutions
+
+---
+
+Made with precision and coffee.
